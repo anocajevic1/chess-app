@@ -138,7 +138,7 @@ class BoardTest {
     }
 
 
-    // Same test with other move method
+    // Same test with other move method*/
 
     @Test
     // Is the board usable after isCheck
