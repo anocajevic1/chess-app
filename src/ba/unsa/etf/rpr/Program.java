@@ -23,10 +23,9 @@ public class Program {
     }
 
     public void main(){
-        board.setBoardAtBeginning(); // postavi figure na plocu
         whitePlayer.setPlayerColor(true); // naznaciti da je bijeli i daje mu figure te boje
         blackPlayer.setPlayerColor(false); // naznaciti da je crni i daje mu figure te boje
-        System.out.println("Igra počinje!");
+        System.out.println("Game starts!");
 
         while(!whitePlayer.pieces.isEmpty() && !blackPlayer.pieces.isEmpty())  { // dok ima figura (racunat cu i da se zadnji kralj pojede a ne samo ostavi na ploci)
             if(whiteMove) {
@@ -43,13 +42,13 @@ public class Program {
         }
 
         if(whitePlayer.pieces.isEmpty())
-            System.out.println("Pobjeda crnog!");
+            System.out.println("Black victory!");
         else if (blackPlayer.pieces.isEmpty())
-            System.out.println("Pobjeda bijelog!");
+            System.out.println("White victory!");
         else if(abrubted)
-            System.out.println("Predaja!");
+            System.out.println("Surrender!");
         else
-            System.out.println("Nerijeseno!"); // u slucaju da se ne moze nista vise pomjeriti na tabli a nije sah mat
+            System.out.println("Draw!"); // u slucaju da se ne moze nista vise pomjeriti na tabli a nije sah mat
 
 
     }

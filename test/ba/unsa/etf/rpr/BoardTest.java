@@ -123,11 +123,12 @@ class BoardTest {
         Board b = new Board();
         assertAll(
                 () -> assertThrows(
-                        IllegalChessMoveException.class,
+                        ChessPiece.IllegalChessMoveException.class,
                         () -> b.move(Rook.class, ChessPiece.Color.BLACK, "H6")
                 ),
                 () -> assertThrows(
-                        IllegalChessMoveException.class,
+
+                        ChessPiece.IllegalChessMoveException.class,
                         () -> b.move(Bishop.class, ChessPiece.Color.BLACK, "H6")
                 ),
                 () -> assertThrows(

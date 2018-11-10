@@ -11,14 +11,15 @@ public abstract class ChessPiece {
         BLACK, WHITE
     }
 
+
     public String getPosition() {
         return position;
     }
     public Color getColor() {
         return pieceColor;
     }
-    public abstract boolean isLegalMove (String position);
-    public abstract void move(String position);
+    public abstract boolean isLegalMove (String position) throws IllegalChessMoveException;
+    public abstract void move(String position) throws IllegalChessMoveException;
 
     public ChessPiece(String position, Color color) {
         isPositionGenerallyLegal(position);
@@ -48,6 +49,5 @@ public abstract class ChessPiece {
         if(position.length()>2 || wrongLetterFormat(position) || wrongNumberFormat(position) ) // predugo da bi bilo pozicija, nepravilno slovo i nepravilan broj
             throw new IllegalArgumentException();
     }
-
 
 };
